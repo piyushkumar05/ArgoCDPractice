@@ -17,6 +17,7 @@ spec:
   ignoreDifferences:
     - kind: Secret
       name: test-secret
+      namespace: myapp
       jsonPointers:
         - /data
 
