@@ -13,6 +13,13 @@ spec:
   destination: 
     server: https://kubernetes.default.svc
     namespace: myapp
+    
+  ignoreDifferences:
+    - kind: Secret
+      name: test-secret
+      namespace: myapp
+      jsonPointers:
+        - /data
 
   ignoreDifferences:
     - kind: Secret
@@ -24,7 +31,8 @@ spec:
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
-
     automated:
       selfHeal: true
       prune: true
+    syncOptions:
+          - RespectIgnoreDifferences=true
