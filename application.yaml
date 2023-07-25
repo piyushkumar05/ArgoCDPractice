@@ -15,7 +15,8 @@ spec:
     namespace: myapp
 
   ignoreDifferences:
-    - kind: Secret
+    - group: apps
+      kind: Secret
       name: test-secret
       namespace: myapp
       jsonPointers:
