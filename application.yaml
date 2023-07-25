@@ -15,7 +15,7 @@ spec:
     namespace: myapp
 
   ignoreDifferences:
-    - group: apps
+    - group: ""
       kind: Secret
       name: test-secret
       namespace: myapp
