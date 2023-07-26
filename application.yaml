@@ -15,12 +15,11 @@ spec:
     namespace: myapp
 
   ignoreDifferences:
-    - group: ""
-      kind: Secret
+    - kind: Secret
       name: test-secret
       namespace: myapp
       jsonPointers:
-        - /data
+        - /data/test
 
   syncPolicy:
     syncOptions:
